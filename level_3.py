@@ -1,3 +1,5 @@
+from random import randint
+
 player = int(input('Pick a number from 1 to 10'))
 computer = 0
 high = 10

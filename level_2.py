@@ -14,10 +14,7 @@ while guesses < 3:
 
     if computer_guess == number:
         break
-    elif computer_guess < number:
-        print("Try Lower!")
-    elif computer_guess > number:
-        print('Try Higher!')
+
 
 if computer_guess == number:
     print("Amazing! That was a lucky guess")

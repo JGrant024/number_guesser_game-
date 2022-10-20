@@ -2,40 +2,47 @@
 from random import randint
 from socket import ntohl
 
-play = True
 
-while True:
-    computer = randint(1, 10)
+def play_computer():
+    play = True
 
-    Guess1 = input('Guess a number between 1 and 10 ').lower()
+    while True:
+        computer = randint(1, 10)
 
-    if int(Guess1) > computer:
-        print("Try guessing lower")
+        Guess1 = input('Guess a number between 1 and 10 ').lower()
 
-    elif int(Guess1) < computer:
-        print("Try guessing higher")
+        if int(Guess1) > computer:
+            print("Try guessing lower")
 
-    elif int(Guess1) == computer:
-        print('You Win!')
-        break
+        elif int(Guess1) < computer:
+            print("Try guessing higher")
 
-    Guess2 = input(
-        'Guess a number between 1 and 10 for the second time ').lower()
+        elif int(Guess1) == computer:
+            print('You Win!')
+            break
 
-    if int(Guess2) > computer:
-        print("Try guessing lower")
+        Guess2 = input(
+            'Guess a number between 1 and 10 for the second time ').lower()
 
-    elif int(Guess2) < computer:
-        print("Try guessing higher")
+        if int(Guess2) > computer:
+            print("Try guessing lower")
 
-    elif int(Guess2) == computer:
-        print('You Win!')
-        break
-    Guess3 = input(
-        'Guess a number between 1 and 10 for the last time ').lower()
-    if int(Guess3) == computer:
-        print('You Win!')
-        break
-    elif int(Guess3) != computer:
-        print('You lose! The number was ' + str(computer))
-        break
+        elif int(Guess2) < computer:
+            print("Try guessing higher")
+
+        elif int(Guess2) == computer:
+            print('You Win!')
+            break
+        Guess3 = input(
+            'Guess a number between 1 and 10 for the last time ').lower()
+        if int(Guess3) == computer:
+            print('You Win!')
+            break
+        elif int(Guess3) != computer:
+            print('You lose! The number was ' + str(computer))
+            break
+
+
+if __name__ == "__main__":
+    # execute only if run as a script
+    play_computer()

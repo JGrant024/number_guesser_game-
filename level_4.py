@@ -1,5 +1,5 @@
-import level_1
-import level_3
+from level_1 import play_computer
+from level_3 import play_user
 
 print("Ready to For a Game?")
 choice = input(
@@ -7,6 +7,6 @@ choice = input(
 )
 
 if choice.lower() == "1":
-    level_1()
+    play_computer()
 elif choice.lower() == "2":
-    level_3()
+    play_user()
